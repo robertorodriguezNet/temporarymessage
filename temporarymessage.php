@@ -103,7 +103,13 @@ class Temporarymessage extends Module
 
     public function hookDisplayFooter()
     {
-        return $this->display(__FILE__, 'views/templates/hook/' . $this->name . '.tpl');
+        $expire_date = strtotime("11-12-2022 00:00:00");
+
+        $expired = (strtotime(date("d-m-Y H:i:00", time())) >= $fecha_limite);
+
+        return  ($expired) ?
+            '' : 
+            $this->display(__FILE__, 'views/templates/hook/' . $this->name . '.tpl');
     }
 
 }
