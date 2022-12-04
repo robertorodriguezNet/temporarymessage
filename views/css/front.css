@@ -51,3 +51,8 @@
     font-weight: 700;
     font-style: italic;
 }
+
+#tm-btn-cerrar{
+    float: right;
+    border-color: #f99;
+}

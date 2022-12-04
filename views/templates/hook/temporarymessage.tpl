@@ -1,5 +1,5 @@
 <div id="tm-message-container">
-
+<button id="tm-btn-cerrar" onclick="closeTemporaryMessage()">cerrar</button>
     <hr>
     <hr>
     <p id="tm-title">
