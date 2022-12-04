@@ -105,7 +105,7 @@ class Temporarymessage extends Module
     {
         $expire_date = strtotime("11-12-2022 00:00:00");
 
-        $expired = (strtotime(date("d-m-Y H:i:00", time())) >= $fecha_limite);
+        $expired = (strtotime(date("d-m-Y H:i:00", time())) >= $expire_date);
 
         return  ($expired) ?
             '' : 
