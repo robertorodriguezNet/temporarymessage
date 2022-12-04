@@ -28,7 +28,10 @@
 
 
 function closeTemporaryMessage(){
+    var d = new Date();
+    d.setTime(d.getTime() + (30*24*60*60*1000)); //keep cookie 30 days
+    var expires = "expires=" + d.toGMTString();         
+    document.cookie = "message_seen" + "=yes;" + expires + ";path=/;SameSite=None;Secure"; 
 
     document.getElementById("tm-message-container").style.display= "none";
-
 }
